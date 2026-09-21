@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/index'
+  get 'users/show'
   devise_for :users
   resources :posts do
     resources :comments, only:[:create, :destroy]
